@@ -254,7 +254,8 @@ class bleuBot:
 					"quantity" : quantity,
 					"comments" : comments
 				 }
-		result = self.makePrivateCallAPI(query)
+		self._setParams(params)
+		result = self.makePrivateAPICall(query)
 		return result
 
 	# 'market/cancel': Use to cancel an order
